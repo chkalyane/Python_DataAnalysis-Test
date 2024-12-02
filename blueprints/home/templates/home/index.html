@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<script>
+  async function fetchNumbers() {
+      const response = await fetch('/get_sales');
+      const data = await response.json();
+      document.getElementById('numbers').innerText = JSON.stringify(data, null, 2);;
+  }
+</script>
+  <div class="card-wrapper column">
+    <div>
+      <button onclick="fetchNumbers()">First 5 sales</button>
+      <p id="numbers"></p>
+    </div>
+  </div>
+{% endblock %}

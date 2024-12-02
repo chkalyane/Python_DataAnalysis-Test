@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="card-wrapper column">
+    <div>
+      <h1>charts</h1>
+      <img src="{{ url_for('charts.charts_png')}}">
+      <br>
+      <img src="{{ url_for('charts.charts1_png')}}">
+    </div>
+  </div>
+{% endblock %}
